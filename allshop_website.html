@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AllShop – Digital & Fashion</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    }
+  </script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">AllShop</h1>
+    <div>
+      <button onclick="switchLanguage('de')" class="mr-2">🇩🇪 Deutsch</button>
+      <button onclick="switchLanguage('en')">🇬🇧 English</button>
+    </div>
+  </header>
+
+  <main class="p-4 max-w-6xl mx-auto">
+    <section data-lang="de">
+      <h2 class="text-2xl font-semibold mb-4">Willkommen bei AllShop</h2>
+      <p class="mb-4">Hier findest du digitale Produkte, Mode, Tools und mehr – alles an einem Ort. Bezahle einfach mit PayPal oder Banküberweisung in EUR.</p>
+    </section>
+    <section data-lang="en" style="display:none">
+      <h2 class="text-2xl font-semibold mb-4">Welcome to AllShop</h2>
+      <p class="mb-4">Find digital products, fashion, tools and more – all in one place. Pay easily with PayPal or bank transfer in USD.</p>
+    </section>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Produktbeispiel -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <img src="https://via.placeholder.com/300x200" alt="Produkt" class="rounded mb-2">
+        <h3 class="font-semibold">Produktname</h3>
+        <p class="text-sm text-gray-600">Digitale Datei oder Kleidung</p>
+        <p class="mt-2 font-bold">€19.99</p>
+        <button class="bg-blue-500 text-white px-4 py-2 mt-2 rounded">Jetzt kaufen</button>
+      </div>
+      <!-- Wiederhole das Produktdiv für jedes weitere Produkt -->
+    </div>
+  </main>
+
+  <footer class="mt-12 bg-white p-4 text-center text-sm">
+    <p>&copy; 2025 AllShop – Alle Rechte vorbehalten.</p>
+    <p>Kontakt: <a href="mailto:info@allshop.com" class="text-blue-600">info@allshop.com</a></p>
+  </footer>
+</body>
+</html>
